@@ -1,6 +1,6 @@
 # Introduction to R
 
-- by Hans H. Sievertsen (h.h.sievertsen@bristol.ac.uk). 
+by Hans H. Sievertsen (h.h.sievertsen@bristol.ac.uk). 
 
 ## Contents
 
