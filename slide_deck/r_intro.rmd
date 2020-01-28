@@ -2,7 +2,7 @@
 author: Hans Henrik Sievertsen (h.h.sievertsen@bristol.ac.uk)
 title: "Introduction to R"
 subtitle: "University of Bristol"
-date: "Version: January 24 - 2020"
+date: "Version: January 28 - 2020"
 output:
   beamer_presentation:
   keep_tex: no
@@ -31,10 +31,23 @@ options(width = 600)
 
 ## Plan
 
-\tableofcontents
+1. Getting started & R basics
+    - Downloading and installing R
+    - Organization of RStudio
+    - Object types, comments, etc
+2. Tidyverse
+    - Installing and loading packages
+    - Importing, tidying, processing & visualizing data.
+3. Working with matrices in R
+    - Creating vectors & matrices.
+    - Matrix multiplication, inverse, determinant etc.
+    - Application: OLS estimator
+4. Functions, control structures & loops in R
+    - User written functions, if-else structures, for & while loops.
+    - Application: maximum likelihood estimation 
+  
 
-
-# 1. Getting started  & R basics
+# 1. Getting started & R basics
 
 ## Getting started  
 
@@ -45,6 +58,8 @@ options(width = 600)
 3. Download **RStudio** [https://rstudio.com/](https://rstudio.com/products/rstudio/download/#download) and install it.
                                                  
 4. Open R Studio
+
+For more on how to install R and RStudio see chapter 3 in ["R Programming for Data Science" (Peng, 2019)](https://bookdown.org/rdpeng/rprogdatascience/getting-started-with-r.html#installation)
 
 ## Organisation of RStudio
 
@@ -59,7 +74,7 @@ options(width = 600)
 knitr::include_graphics(c("graphics/rstudio.png"))
 ```
 
-## R basics I
+## R basics: R as a calculator
 
 **R as a calculator** 
 
@@ -72,7 +87,7 @@ knitr::include_graphics(c("graphics/rstudio.png"))
 - You can also type 5+3 in the script editor, highlight what you just wrote and click `Ctrl`+`Enter`.
 - Using the script editor, the keyboard combination `Ctrl`+`Enter` executes the current line or the selected area.
 
-## R basics II
+## R basics: the assignment operator
 
 **The assignment operator:** `<-`
 
@@ -88,7 +103,7 @@ value1<-5
 value1<-5
 value1+3
 ```
-## R basics III
+## R basics: print()
 
 **Printing**
 
@@ -110,7 +125,7 @@ value3
 - Automatic printing is disabled in loops, functions etc (more on that later).
 
 
-## R basics IV
+## R basics: functions
 
 **R functions**
 
@@ -132,7 +147,7 @@ print(value3,TRUE)
 print(x=value3,quote=TRUE)
 ```
 
-## R basics V
+## R basics: object type
 
 **Object types**
 
@@ -161,7 +176,7 @@ typeof(var)
 
 - Additional types: NULL,raw, complex, list, expression
 
-## R basics VI
+## R basics: vectors
 
 **Vectors**
 
@@ -184,7 +199,34 @@ print(vector2)
 ```
 (all objects are strings)
 
-## R basics VII
+## R basics: entering values
+
+
+- A range from 1 to 17:
+
+```{r }
+vector<-1:17
+print(vector)
+```
+
+- A range from 1 to 17 in steps of 0.5 using `seq()`:
+```{r }
+vector<-seq(1,17,by=0.5)
+print(vector)
+```
+
+- A vector of length 12 with missing values (`NA`) using  `rep()`:
+```{r }
+vector<-rep(NA,12)
+print(vector)
+```
+ 
+- A vector of length 12 with draws from a normal distribution:
+```{r }
+vector<-rnorm(mean=0,sd=1,n=12)
+print(vector)
+```
+## R basics: comments
 
 **Comments**
 
@@ -200,16 +242,39 @@ print(vector2)
 this is not ignored by R # but this is
 ```
 
+## R basics: useful functions
+
+- Create a list (can be heterogenous) using `list()`
+```{r }
+a<-"Hello"
+b<-1:7
+c<-list(a,b)
+c
+```
+
+- Get the length of an object using `length()`:
+
+```{r }
+vector<-seq(0,3,by=0.02)
+obj<-length(vector)
+```
+- Concatenate strings with `paste()`:
+```{r }
+obj1<-"Hello"
+obj2<-"Bristol"
+obj3<-paste(obj1,obj2,"!",sep=" ")
+print(obj3)
+```
 
 
-## R basics VIII
+## R basics: working directory and documentation
 
 **Working directory**
 \begin{itemize}
 \item We specify the working directory with `setwd()`.
 \item [] (the default location for saving and loading files.)
 \end{itemize}
-```{r }
+```{r, eval=FALSE }
 setwd("C:\\Users\\hs17922\\Documents")
 ```
 - Note: use `\\` instead of `\`.
@@ -229,11 +294,13 @@ setwd("C:\\Users\\hs17922\\Documents")
 - We access R documentation for the function called `functionname` with `?functionname`.
 - We use the `#` to add comments to our script.
 - R has five atomic classes of objects: character, numeric, integer, integer, complex (not covered) and logical.
-- We create vectors with `c()`
+- We create vectors with `c()` and lists with `list()`.
+- Entering values using `rep()` and `seq()`.
 - Lists are homogeneous and only contain one object class. 
 
 
-For more details see chapter 4 in ["R Programming for Data Science" ( Peng, 2019)](https://bookdown.org/rdpeng/rprogdatascience/r-nuts-and-bolts.html)
+For more details see chapter 4 in ["R Programming for Data Science" (Peng, 2019)](https://bookdown.org/rdpeng/rprogdatascience/r-nuts-and-bolts.html)
+
 
 
 \normalsize
@@ -303,6 +370,7 @@ head(mydataset)
 ```
 \normalsize
 - `tail()` displays the last six observations in the dataset.
+- We can specify the number of rows to show with `n=6`: `head(mydataset,n=6)` or `tail(mydataset,n=6)` (to show 6 rows, the default).
 - `View()` opens the dataset in a viewer. 
 
 ## Tidying data I
@@ -667,14 +735,14 @@ lines(var1,var3,
 **ggplot2** a grammar for graphics
 
 - `ggplot(data,aes(x,y,...))`
-- `data`: the name of the dataset. 
-- `...`: `aes()` the aesthetic mappings
--`x` the variable to plot on the x-axis.
--`y` the variable to plot on the y-axis.
+  - `data`: the name of the dataset. 
+  - `...`: `aes()` the aesthetic mappings.
+  - `x` the variable to plot on the x-axis.
+  - `y` the variable to plot on the y-axis.
 
 - `+geom_line()`
-- `+` add a layer to the ggplot object
-- `geom_line()` add a line chart using the data and the aesthetic mappings specified in ggplot() (`geom_line` inherits the settings specified in `ggplot()`).
+  - `+` add a layer to the ggplot object
+  - `geom_line()` add a line chart using the data and the aesthetic mappings specified in ggplot() (`geom_line` inherits the settings specified in `ggplot()`).
 
 - `+geom_point(data,aes(x,y,...))`
 - `+` add a layer to the ggplot object
@@ -726,8 +794,10 @@ ggplot(mydataset,aes(x=parental_lincome,y=test_year_2))+geom_point()
 
 - We use `merge()` to merge datasets.
 
-
-# 3. Matrix algebra
+For more details on  tidyverse  see ["R for data science: import, tidy, transform, visualize, and model data." (Wickham & Grolemund, 2016)](https://r4ds.had.co.nz/). 
+                                                                      
+                                                                      
+# 3.  Working with matrices in R
 
 ## A vector
 - We would like to enter the following vector $A$ into R
@@ -737,7 +807,7 @@ $$A= \left[\begin{matrix}3\\5\\4\end{matrix}\right]$$
 - We already know how to do this. We simply use `c()`:
 
 ```{r}
-A=c(3,5,4)
+A<-c(3,5,4)
 A
 ```
 - Note that R prints it as row, but it is a column vector. 
@@ -749,7 +819,7 @@ A
 - To verify that $A$ is really a column vector, let's consider the transpose of A:
 
 $$A^T= \left[\begin{matrix}3,5,4\end{matrix}\right]$$
-- which we can achieve using `t()` in R:
+- which we can obtain in R by means of the transpose function, `t()`:
 
 ```{r}
 t(A)
@@ -757,7 +827,7 @@ t(A)
 
 - Where the `m` in `[m,n]` refers to the **row** and the `n` to the **column**.
 
-- and let's consider the transpose of the transposed matrix to get back to the original $A$ vector.:
+- and let's consider the transpose of the transposed vector to get back to the original $A$ vector.:
 ```{r}
 t(t(A))
 ```
@@ -767,17 +837,17 @@ t(t(A))
 - We can also explictly create vectors and matrices using the `matrix()` function. 
 - To create our A vector, we write:
 ```{r}
-A=matrix(c(3,5,4),ncol=1)
+A<-matrix(c(3,5,4),ncol=1)
 A
 ```
 - Note the difference between
 ```{r}
-A=matrix(c(3,5,4),ncol=1)
+A<-matrix(c(3,5,4),ncol=1)
 class(A)
 ```
 and
 ```{r}
-A=c(3,5,4)
+A<-c(3,5,4)
 class(A)
 ```
 
@@ -790,14 +860,39 @@ class(A)
 $$B= \left[\begin{matrix}3,5\\11,2\end{matrix}\right]$$
 - which we can enter as:
 ```{r}
-B=matrix(c(3,11,5,2),ncol=2)
+B<-matrix(c(3,11,5,2),ncol=2)
 B
 ```
 - R first fills the first column, then the second etc...
-- and the transpose of B:
+
+- And the transpose of `B`:
 ```{r}
 t(B)
 ```
+
+
+## Subsetting
+
+- We can extract a subset of an object using squared brackets `[row,col]`
+
+```{r}
+B<-matrix(c(3,11,5,2),ncol=2)
+C<-B[2,1]
+print(C)
+```
+  - The first number in the brackets, 2, tells R that we want the second row.
+  - The second number in the brackets, 1, tells R that we want the first column. 
+  - We therefore extract the value in the second row and the first column. 
+  
+- We can also extract a range, say that we want the elements in row 1 to 2 and column 1:
+
+```{r}
+B<-matrix(c(3,11,5,2),ncol=2)
+C<-B[1:2,1]
+print(C)
+```
+
+For more details on subsetting R objects see  [chapter 9 in "R Programming for Data Science" (Peng, 2019)](https://bookdown.org/rdpeng/rprogdatascience/subsetting-r-objects.html)
 
 ## Addition
 
@@ -809,9 +904,10 @@ $$\alpha B= \left[\begin{matrix}\alpha +  3,\alpha + 5\\\alpha +  11,\alpha +  2
 
 - and in R:
 ```{r}
-B=matrix(c(3,11,5,2),ncol=2)
-alpha=0.5
-alpha+B
+B<-matrix(c(3,11,5,2),ncol=2)
+alpha<-0.5
+C<-alpha+B
+print(C)
 ```
 
 ## Addition
@@ -828,9 +924,10 @@ $$ C= \left[\begin{matrix} 1,2 \\ 3, 4 \end{matrix}\right] \text{ and  }
 $$C + D=\left[\begin{matrix} 1 + 5,2 + 6 \\ 3 + 7, 4 + 8 \end{matrix}\right]$$
 - and in R:
 ```{r}
-C=matrix(c(1,3,2,4),ncol=2)
-D=matrix(c(5,7,6,8),ncol=2)
-C+D
+C<-matrix(c(1,3,2,4),ncol=2)
+D<-matrix(c(5,7,6,8),ncol=2)
+E<-C+D
+print(E)
 ```
 
 
@@ -842,16 +939,18 @@ C+D
 - Note: the dimensions have to align when adding two matrices together:
 
 ```{r, error=TRUE}
-E=matrix(c(1,3,2,4),ncol=1)
-F=matrix(c(5,7,6,8),ncol=2)
+E<-matrix(c(1,3,2,4),ncol=1)
+F<-matrix(c(5,7,6,8),ncol=2)
 E+F
 ```
 
 - $E$ is a $1\times 4$ matrix.
 - $F$ is a $2\times 2$ matrix.
 
-  -We want to add the element in the first row and first column of $E$ to the element in the first row and the first column of $F$ That's okay.
-  - ...
+  - We want to add the element in the first row and first column of $E$ to the element in the first row and the first column of $F$ That's okay.
+  
+  ...
+  
   - We want to add the element in the third row and first column of $E$ to the element in the third row and the first column of $F$. That's not doable, because  $F$ only has two rows.
   
   
@@ -980,7 +1079,7 @@ diag(c(1,2,3))
 
 ## Some special matrices 
 
-- The identity matrix, $I$, is a diagonal matrix, where all elements in the diagonal are 1. 
+- The identity matrix: a diagonal matrix where all elements in the diagonal are 1. 
 
 ```{r, error=TRUE}
 diag(c(1,1))
@@ -988,12 +1087,12 @@ diag(c(1,1))
 
 - An Identity matrix satisfies $IA=AI=A$, where A is a matrix. 
 ```{r, error=TRUE}
-A=matrix(c(1,3,4,5),ncol=2)
-I=diag(c(1,1))
+A<-matrix(c(1,3,4,5),ncol=2)
+I<-diag(c(1,1))
 A%*%I
 ```
 
-We can also appy `diag()` on matrix to extract the diaognal
+We can also apply `diag()` on matrix to extract the diaognal
 
 ```{r, error=TRUE}
 A=matrix(c(1,3,4,5),ncol=2)
@@ -1001,15 +1100,7 @@ diag(A)
 ```
 
 
-- A $J$ matrix (all entries are 1s):
-```{r, error=TRUE}
-matrix(1, nrow = 2, ncol = 2)
-```
 
-- A matrix where all  entries outside the  diagonal are  zero:
-```{r, error=TRUE}
-diag(c(1,2,3))
-```
 
 ## The inverse of a matrix
 
@@ -1071,7 +1162,7 @@ rbind(A,B)
 
 ## Application: ordinary least squares
 
-- Let's return to our data and estimate the following model using ordinary least squares: 
+- Let's return to our data and estimate the following model using Ordinary Least Squares (OLS): 
 
 \vspace{-12pt}
 
@@ -1086,7 +1177,9 @@ summary(my_lm)
 ```
 
 \normalsize
-- In `lm()` we first specify the model to estimate: `y~x1+x2+..` (R automatically adds a constant).
+  - We specify the model to estimate on the form: `y~x1+x2+..` (R automatically adds a constant).
+  - We specify the data object to use using `data=..`.
+  
 - We store the result of fitting the model using OLS in the object called `my_lm`
 - We use the `summary()` function to summarize the results.
 
@@ -1123,7 +1216,8 @@ $$\hat{\beta}=(X^TX)^{-1}X^Ty$$
 - We know how to find the inverse, how to multiply matrices and how to transpose matrices in R. We are ready!
 
 **But**
-- We need to get the data from the dataset into the matrix format first!
+
+- We first need to get the data from the dataset into the matrix.
 
 
 ```{r,eval=FALSE}
@@ -1161,13 +1255,16 @@ mydataset<-read_csv("example_data1.csv")
 ```{r,echo=FALSE}
 mydataset$test_year_6
 ```
+\normalsize
 
 - let's save data  in a column vector called y:
 
 ```{r,eval=FALSE}
 mydataset<-read_csv("example_data1.csv")
-y=matrix(mydataset$test_year_6,ncol=1)
+y<-matrix(mydataset$test_year_6,ncol=1)
 ```
+
+- Note that we also could use the `[]` subsetting method, but this requires us to know the orde of the columns in the dataset.
 
 ## Application: Ordinary Least Squares
 
@@ -1194,44 +1291,58 @@ class(X)
 ```
 
 \normalsize
+- let's check the content of `X` by printing the first five rows and all columns:
+
+```{r,eval=FALSE}
+print(X[1:5,])
+```
+
+\tiny
+```{r,echo=FALSE}
+print(X[1:5,])
+```
+
+\normalsize
 
 ## Application: Ordinary Least Squares
 
 **Let's find the OLS estimates**
 
-- We now simply plugin the OLS formula in R
+- The point-estimates of the OLS estimator are given by:
 
 $$\hat{\beta}=(X^TX)^{-1}X^Ty$$
+
+- Let's translate this into R.
 
 \small
 ```{r,eval=FALSE}
 # load dataset
 mydataset<-read_csv("example_data1.csv")
 # extract the dependent variable and store as column vector y
-y=matrix(mydataset$test_year_6,ncol=1)
+y<-matrix(mydataset$test_year_6,ncol=1)
 # extract the covariates to include and create a constant and as matrix X
 X<-mydataset%>%
    select(parental_lincome,summercamp)%>%
    mutate(constant=1)%>%
    as.matrix()
 # implement OLS formula
-betahat=solve(t(X)%*%X)%*%t(X)%*%y
+betahat<-solve(t(X)%*%X)%*%t(X)%*%y
 # show betahat vector
-betahat
+print(betahat)
 ```
 \tiny
 ```{r,include=FALSE}
 # load dataset
 mydataset<-read_csv("example_data1.csv")
 # extract the dependent variable and store as column vector y
-y=matrix(mydataset$test_year_6,ncol=1)
+y<-matrix(mydataset$test_year_6,ncol=1)
 # extract the covariates to include and create a constant and as matrix X
 X<-mydataset%>%
    select(parental_lincome,summercamp)%>%
    mutate(constant=1)%>%
    as.matrix()
 # implement OLS formula
-betahat=solve(t(X)%*%X)%*%t(X)%*%y
+betahat<-solve(t(X)%*%X)%*%t(X)%*%y
 
 ```
 ```{r,echo=FALSE}
@@ -1248,13 +1359,13 @@ betahat
 
 - the fitted values are given by $X\hat{\beta}$.
 - the residuals are given by $y-X\hat{\beta}$.
-- we can create a q-q plot of the betas using base graphics:
+- we can create a q-q plot of the residuals using base graphics:
 
 \small
 ```{r,eval=FALSE}
 #calculate residuals
 residuals<-(y-X%*% betahat)
-# create histogram
+# create a q-q plot
 qqnorm(residuals)
 ```
 \tiny
@@ -1262,7 +1373,7 @@ qqnorm(residuals)
 # load dataset
 mydataset<-read_csv("example_data1.csv")
 # extract the dependent variable and store as column vector y
-y=matrix(mydataset$test_year_6,ncol=1)
+y<-matrix(mydataset$test_year_6,ncol=1)
 # extract the covariates to include and create a constant and as matrix X
 X<-mydataset%>%
    select(parental_lincome,summercamp)%>%
@@ -1280,11 +1391,11 @@ qqnorm(residuals)
 ```
 
 
-## Matrix algebra - summary
+## Matrices in R - summary
 
-- Create column vector A: `A=c()`.
-- Create matrix A: `A=matrix()`.
-- Convert B to matrix A: `A=as.matrix(B)`.
+- Create column vector A: `A<-c()`.
+- Create matrix A: `A<-matrix()`.
+- Convert B to a matrix and store it in A: `A<-as.matrix(B)`.
 - Transpose matrix A: `t(A)`.
 - Inverse of matrix A: `solve()`.
 - Element-wise multiplication of matrix `A` and `B`: `A*B`.
@@ -1297,7 +1408,7 @@ qqnorm(residuals)
                                                                                                                                            
 
 
-# 4. Functions, control structures and loops
+# 4. Functions, control structures and loops in R
 
 ## Defining functions
 
@@ -1338,10 +1449,10 @@ The function consists of four parts:
 3. function body:  `z=x*y`
 4. return: return(z)
 
-- Let's define that function
+- in R:
 ```{r}
 Hansfunction <- function(x, y) {
-   z=x*y
+   z<-x*y
    z
 }
 
@@ -1366,13 +1477,13 @@ Hansfunction(3)
 - Let's define that function
 ```{r}
 Hansfunction <- function(x=2, y=2) {
-   z=x*y
+   z<-x*y
    z
 }
 Hansfunction(3)
 ```
 
-- This works well, but if you accidentially forgot an argument!
+- This works well, but if you accidentially forgot an argument? It would be nice with a warning.
 
 
 ## Control structures
@@ -1418,7 +1529,7 @@ Hansfunction <- function(x=2, y=3) {
   else{
      print("Well done, you specified all arguments!")
   }
-     z=x*y
+     z<-x*y
      z
 }
 Hansfunction(3)
@@ -1426,6 +1537,37 @@ Hansfunction(3)
 - here we use the function `missing()` to test whether the argument missing.
 - the `|` corresponds to "or" (the logical expression evaluates to true if x OR y are missing).
 - We can use the symbol "&" if we only want the expression to evaluate to true if both are x and y are missing. 
+
+## Local vs global
+
+- Global R objects are accessible from anywhere.
+- Local R objects only exist in local environment.
+\small
+
+```{r}
+assign_to_z <- function(x) {
+     z<-x
+}
+z=5
+assign_to_z(3)
+print(z)
+```
+\normalsize
+- What is going on? Inside a function is a local environment.
+- Changing and creating objects within local environments does affect global environments.
+- Unless we explicitly tell R to do so:
+
+\small
+```{r}
+assign_to_z <- function(x) {
+     z<<-x
+}
+z=5
+assign_to_z(3)
+print(z)
+```
+\normalsize
+- Note the use of `<<-` (the super assignment operator).
 
 ## Our own lm() function
 
@@ -1473,10 +1615,10 @@ mylm(x=c("parental_lincome","summercamp"),y="test_year_4",data=mydataset)
 
 **For loop**
 
-- a for loop repeats a list of statements
-- the number of times the statements are repeated is stated in the loop *header*
-- the statements are provided in the *body*
-- example:
+- A loop repeats a set of statements. 
+- The number of times the statements are repeated is stated in the loop *header*.
+- The set statements are provided in the loop *body*.
+- Example:
 
 \small
 ```{r,eval=FALSE}
@@ -1491,21 +1633,21 @@ for (x in 1:3){
 }
 ```
 \normalsize
-- the loop header `for (x in 1:3){` states that the loop should be repeated 3 times:
+- The loop header `for (x in 1:3){` states that the loop should be repeated 3 times:
   1. Once where `x` has the value 1
   2. Once where `x` has the value 2
   3. Once where `x` has the value 3.
   
-- the loop header  states that in each loop *iteration* the statment `print(x)` should be executed. 
+- The loop header  states that in each loop *iteration* the statment `print(x)` should be executed. 
 
 ## Loops
 
 **While loop**
 
-- we can also create a loop that repats itself until a certain condition is violated.
-- this is called a **while** loop.
-- the loop body statements are repeated until the while condition is violated. 
-- example:
+- We can also create a loop that repats itself until a certain condition is violated.
+- This is called a **while** loop.
+- The loop body statements are repeated until the while condition is violated. 
+- Example:
 
 \small
 ```{r,eval=FALSE}
@@ -1532,11 +1674,11 @@ while (x<5){
 
 ## Application: maximum likelihood
 
-**Maximum likelihood**: find the parameters that maximize the likelihood that we observe, given a distribution.
+**Maximum likelihood**: find the parameters that maximize the likelihood that we observe what we've observed, given an assumed functional form and  distribution.
 
-- application: estimate the probability that a child probability participates in the summer school using a probit model.
+- Application: estimate the probability that a child probability participates in the summer school using a probit model.
 
-- **benchmark**: R's built-in function
+- **Benchmark**: R's built-in function
 
 \small
 ```{r ,eval=FALSE}
@@ -1579,7 +1721,7 @@ $$l(\beta;y,X)=\sum_t\left(y_t\ln\Phi(x'_t\beta) + (1-y_t)\ln\left(1-\Phi(x'_t\b
 
 - **R implementation**
   - $\Phi()$  is the cumulative distribution function of the standard normal distribution, which we implement in R with `pnorm()`.
-  - `sum()` computs the sum
+  - `sum()` computs the sum.
   - We can therefore implement the above in R as:
 `l<-sum(y*log(pnorm(xb))+(1-y)*log(1-pnorm(xb)))`  
   
@@ -1617,7 +1759,7 @@ xb<-X%*%c(0.79,-11.9)
 # log likelihood
 l<-sum(y*log(pnorm(xb))+(1-y)*log(1-pnorm(xb)))
 # return value
-l
+print(l)
 ```
 
 \normalsize 
@@ -1643,8 +1785,8 @@ my_loglikelihood <- function(y,x,beta,data) {
   xb<-Xvar%*%betavec
   # log likelihood
   l<-sum(yvar*log(pnorm(xb))+(1-yvar)*log(1-pnorm(xb)))
-  # return
-  l
+  # return (explicitly tell R to return this object)!
+  return(l) 
 }
 # load data
 mydataset<-read_csv("example_data1.csv")
@@ -1685,21 +1827,22 @@ my_loglikelihood(x="parental_lincome",y="summercamp",
 
 **2. Loop over values**
 
-- Simplification: keep beta 0 constant at -11.9 and vary beta1
+- Simplification: keep $\beta_0$ constant at -11.9 and only change $\beta_1$:
 ```{R}
 # loop over values of beta1
-for (i in 0:1){
-  print(my_loglikelihood(x="parental_lincome",y="summercamp",
+for (i in seq(0,1,by=0.2)){
+  l<-(my_loglikelihood(x="parental_lincome",y="summercamp",
                  beta=c(i,-11.9),data=mydataset))
+  print(paste("For beta1=" ,i, " the log-likelihood is: ",l,".", sep=""))
 }
 
 ```
 
-- Okay, that works, but 2 values are a bit boring. Let's try more!
+- Okay, that works, but 5 values are a bit boring. Let's try more!
 
 ## Application: maximum likelihood
 
-- Let's loop over more values, store all results in a data frame and show the likelihood in a chart as a function of beta 1:
+- Let's loop over more values, store all results in a data frame and show the likelihood in a chart as a function of $\beta_1$:
 \small 
 ```{R,fig.width=7,fig.height=4, fig.align = "center", out.width = '150pt'}
 # create empty matrix to store values
@@ -1718,14 +1861,19 @@ ggplot(df,aes(x=beta1,y=loglikelihood))+geom_line()
 
 - The chart indicates that the maximum value of the log-likelihood function could be around 0.79 (as the R built-in function suggest).
 - But how do we find the exact values? And how about $\beta_0$?
-- We use a built-in optimizer. An function to maximize or minimize to mimize an expression.
-- One such function is `optim()`:
+- We use a built-in **optimizer**. 
+    - A function to maximize or minimize to mimize an expression.
+- One such function is `optim()`, In `optim`() we specify:
+  - `par`:  starting values for the parameters.
+  - `fn`: the function to maximize (or minimize).
+  - `control` a control parameter (`fnscale=-1` is a scaling parameter that we apply on the values. By setting it to -1 it becomes a maximization problem).
+  - `...`: options passed on to the function in `fn`.
 
 \small
 
 ```{r ,eval=FALSE}
 # use the R function optim to optimize ll
-optim(c(0,0), my_loglikelihood, control=list(fnscale = -1),
+optim(par=c(0,0), fn=my_loglikelihood, control=list(fnscale = -1),
       x="parental_lincome",y="summercamp",data=mydataset)
 ```
 
@@ -1733,7 +1881,7 @@ optim(c(0,0), my_loglikelihood, control=list(fnscale = -1),
 
 ```{r ,echo=FALSE}
 # use the R function optim to optimize ll
-optim(c(0,0), my_loglikelihood, control=list(fnscale = -1),
+optim(par=c(0,0), fn=my_loglikelihood, control=list(fnscale = -1),
       x="parental_lincome",y="summercamp",data=mydataset)
 ```
 
@@ -1766,5 +1914,12 @@ for (x in range){
 }
 ```
 
-- We can combine these tools and implement a maximum likelihood estimator
+- We can combine these tools and implement a maximum likelihood estimator.
+
+## The end
+
+Please send suggestions for improvements and notes about identified mistakes to h.h.sievertsen@bristol.ac.uk.
+
+Thanks.
+
 
