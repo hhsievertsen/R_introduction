@@ -25,14 +25,14 @@
 #             Save the results in a new object and print them in the console.
 #             The printed result should be as follows:
 
-                # A tibble: 4 x 3
-                  # Groups:   female [2]
-                  #female summercamp  mean
-                  #<dbl>      <dbl> <dbl>
-                  #  1      0          0  1.53
-                  #  2      0          1  2.54
-                  #  3      1          0  1.90
-                  #  4      1          1  2.34
+# A tibble: 4 x 3
+# Groups:   summercamp [2]
+#  summercamp female  mean
+#       <dbl>  <dbl> <dbl>
+# 1          0      0  2.07
+# 2          0      1  1.69
+# 3          1      0  2.28
+# 4          1      1  2.33
 
 # Exercise 7: Repeat exercise 1-5 again, but use the %>% operator to do all this in one step.
 
