@@ -20,7 +20,7 @@
 
 # Exercise 5: load the dataset "example_data1.csv" and estimate the following model:
 #             test_year_2=alpha0+alpha1*parental_schooling+alpha2*parental_lincome+e
-#             using OLS with the ls() function. Print the results in the console.
+#             using OLS with the lm() function. Print the results in the console.
 
 
 # Exercise 6: Estimate the same model as in Exercise 5, but this time you do it manually using 
