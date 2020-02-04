@@ -43,7 +43,7 @@ vector1<-XYZ
 print(XYZ)
 
 # Exercise 7: Create a vector of length 25 with draws from a normal distribution
-#             and call the vector vector2. Add vector2 to vector1 created 
+#             and call the vector vector2. Add vector2 to vector1 created above 
 #             and store the resulting vector in an object named vector3.
 #             Print the content of vector3 in the console. 
 #             Run the code to verify that it works. 
