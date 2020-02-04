@@ -51,7 +51,7 @@ options(width = 600)
 
 ## Getting started  
 
-1. Download this **slide deck** ,  **example datasets** and **exercises** from [github.com/hhsievertsen/rintro](https://github.com/hhsievertsen/rintro)
+1. Download this **slide deck** ,  **example datasets** and **exercises** from [https://github.com/hhsievertsen/R_introduction](https://github.com/hhsievertsen/R_introduction)
 
 2. Download  **R** from [stats.bris.ac.uk/R/](https://www.stats.bris.ac.uk/R/) and install it.
 
