@@ -5,8 +5,8 @@ account: hhsievertsen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1711817
-bundleId: 2756773
+bundleId: 2798687
 url: https://hhsievertsen.shinyapps.io/RIntro/
-when: 1580158694.20864
+when: 1581618944.80636
 asMultiple: FALSE
 asStatic: FALSE

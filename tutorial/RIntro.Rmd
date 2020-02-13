@@ -1,5 +1,5 @@
 ---
-title: "Economic Data"
+title: "R introduction "
 output: learnr::tutorial
 runtime: shiny_prerendered
 ---
@@ -12,16 +12,8 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-# Introduction to R 
-
-by Hans H. Sievertsen (<tt>h.h.sievertsen@bristol.ac.uk</tt>)
 
 
-*26-1-2020 - version 0.3: minor adjustments typos etc.* 
-
-*28-10-2019 - version 0.2: corrected typos etc.* 
-
-*08-10-2019 - version 0.1: first version* 
 
 ## Welcome!
 
@@ -46,6 +38,10 @@ The tutorial includes small code blocks. The code blocks allow you to immediatel
 
 Let's get started. Clcik on  <tt>Next topic</tt> to start the first lecture.
 
+Best,
+Hans
+
+by  Hans H. Sievertsen, University of Bristol 13/2/2020
 
 
 
