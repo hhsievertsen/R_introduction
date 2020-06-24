@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.15)  29 JAN 2020 08:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.15)  3 JUN 2020 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1363,7 +1363,7 @@ Overfull \vbox (32.53929pt too high) detected at line 141
 [1
 
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for TS1+lmss on input line 194
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 192
 .
 (c:/texlive/2018/texmf-dist/tex/latex/lm/ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1371,13 +1371,13 @@ File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 198.
+(Font)              <8> on input line 196.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 198.
+(Font)              <6> on input line 196.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 198.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 196.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 198.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 196.
 [3
 
 ] [4
@@ -1386,7 +1386,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
 <graphics/rstudio.png, id=48, 461.47406pt x 483.30562pt>
 File: graphics/rstudio.png Graphic file (type png)
 <use graphics/rstudio.png>
-Package pdftex.def Info: graphics/rstudio.png  used on input line 238.
+Package pdftex.def Info: graphics/rstudio.png  used on input line 232.
 (pdftex.def)             Requested size: 153.64493pt x 160.91464pt.
 [5
 
@@ -1394,12 +1394,12 @@ Package pdftex.def Info: graphics/rstudio.png  used on input line 238.
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 14.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 13.
 (c:/texlive/2018/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <8> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 15.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 14.
 ) [6
 
 ]
@@ -1431,21 +1431,21 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <8> not available
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb
-Overfull \hbox (423.69814pt too wide) in paragraph at lines 36--36
+Overfull \hbox (423.69814pt too wide) in paragraph at lines 35--35
 []\T1/lmtt/m/n/8 ##  [1]  1.0  1.5  2.0  2.5  3.0  3.5  4.0  4.5  5.0  5.5  6.0
   6.5  7.0  7.5  8.0  8.5  9.0  9.5 10.0 10.5 11.0 11.5 12.0 12.5 13.0 13.5 14.
 0 14.5 15.0 15.5 16.0 16.5 17.0[] 
  []
 
 
-Overfull \hbox (334.42015pt too wide) in paragraph at lines 71--71
+Overfull \hbox (334.42015pt too wide) in paragraph at lines 70--70
 []\T1/lmtt/m/n/8 ##  [1]  0.49800999 -0.70337225 -1.17900226  1.21432546  0.569
 02785 -0.41138036 -0.76612978  0.59652204  1.66371314 -0.67404534  0.97343235 -
 0.05487856[] 
  []
 
 )
-Overfull \vbox (9.06085pt too high) detected at line 585
+Overfull \vbox (9.06085pt too high) detected at line 565
  []
 
 [12
@@ -1459,7 +1459,7 @@ Overfull \vbox (9.06085pt too high) detected at line 585
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (18.54765pt too high) detected at line 666
+Overfull \vbox (18.54765pt too high) detected at line 642
  []
 
 [14
@@ -1490,7 +1490,7 @@ Overfull \vbox (18.54765pt too high) detected at line 666
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (18.20715pt too high) detected at line 852
+Overfull \vbox (18.20715pt too high) detected at line 818
  []
 
 [20
@@ -1499,56 +1499,56 @@ Overfull \vbox (18.20715pt too high) detected at line 852
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb
-Overfull \hbox (186.77013pt too wide) in paragraph at lines 33--33
+Overfull \hbox (186.77013pt too wide) in paragraph at lines 32--32
 []\T1/lmtt/m/n/5 ##   person_id school_id summercamp female parental_schooling 
 parental_lincome test_year_1 test_year_2 test_year_3 test_year_4 test_year_5 te
 st_year_6 test_year_7 test_year_8 test_year_9[] 
  []
 
 
-Overfull \hbox (186.77263pt too wide) in paragraph at lines 33--33
+Overfull \hbox (186.77263pt too wide) in paragraph at lines 32--32
 []\T1/lmtt/m/n/5 ##   <chr>         <dbl>      <dbl>  <dbl>              <dbl> 
            <dbl>       <dbl>       <dbl>       <dbl>       <dbl>       <dbl>   
     <dbl>       <dbl>       <dbl>       <dbl>[] 
  []
 
 
-Overfull \hbox (186.76637pt too wide) in paragraph at lines 33--33
+Overfull \hbox (186.76637pt too wide) in paragraph at lines 32--32
 []\T1/lmtt/m/n/5 ## 1 p1                5          1      0                 14 
             15.3       3.25         2.99        2.58       2.16         2.61   
      3.10        3.44        3.42        3.29[] 
  []
 
 
-Overfull \hbox (186.76512pt too wide) in paragraph at lines 33--33
+Overfull \hbox (186.76512pt too wide) in paragraph at lines 32--32
 []\T1/lmtt/m/n/5 ## 2 p2               14          0      1                 11 
             14.0       0.993        1.59        1.16       0.817        1.25   
      1.76        1.58        1.07        1.97[] 
  []
 
 
-Overfull \hbox (186.77138pt too wide) in paragraph at lines 33--33
+Overfull \hbox (186.77138pt too wide) in paragraph at lines 32--32
 []\T1/lmtt/m/n/5 ## 3 p3                7          1      0                 13 
             15.1       1.82         1.02        2.38       1.88         2.21   
      2.57        3.09        3.11        2.28[] 
  []
 
 
-Overfull \hbox (186.76637pt too wide) in paragraph at lines 33--33
+Overfull \hbox (186.76637pt too wide) in paragraph at lines 32--32
 []\T1/lmtt/m/n/5 ## 4 p4                8          1      0                 14 
             15.3       2.15         2.99        2.01       2.23         2.31   
      2.96        3.00        2.80        2.89[] 
  []
 
 
-Overfull \hbox (186.76762pt too wide) in paragraph at lines 33--33
+Overfull \hbox (186.76762pt too wide) in paragraph at lines 32--32
 []\T1/lmtt/m/n/5 ## 5 p5                9          1      1                 14 
             15.7       3.03         3.17        2.66       3.02         2.91   
      3.54        3.03        3.31        3.35[] 
  []
 
 
-Overfull \hbox (186.76387pt too wide) in paragraph at lines 33--33
+Overfull \hbox (186.76387pt too wide) in paragraph at lines 32--32
 []\T1/lmtt/m/n/5 ## 6 p6               26          0      0                 12 
             14.0       1.52         1.55        1.10       1.53         1.63   
      1.94        1.78        1.29        1.95[] 
@@ -1565,7 +1565,7 @@ Overfull \hbox (186.76387pt too wide) in paragraph at lines 33--33
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (15.4822pt too high) detected at line 992
+Overfull \vbox (15.4822pt too high) detected at line 952
  []
 
 [23
@@ -1574,56 +1574,56 @@ Overfull \vbox (15.4822pt too high) detected at line 992
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb
-Overfull \hbox (186.77013pt too wide) in paragraph at lines 41--41
+Overfull \hbox (186.77013pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/5 ##   person_id school_id summercamp female parental_schooling 
 parental_lincome test_year_1 test_year_2 test_year_3 test_year_4 test_year_5 te
 st_year_6 test_year_7 test_year_8 test_year_9[] 
  []
 
 
-Overfull \hbox (186.77263pt too wide) in paragraph at lines 41--41
+Overfull \hbox (186.77263pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/5 ##   <chr>         <dbl>      <dbl>  <dbl>              <dbl> 
            <dbl>       <dbl>       <dbl>       <dbl>       <dbl>       <dbl>   
     <dbl>       <dbl>       <dbl>       <dbl>[] 
  []
 
 
-Overfull \hbox (186.76637pt too wide) in paragraph at lines 41--41
+Overfull \hbox (186.76637pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/5 ## 1 p1                5          1      0                 14 
             15.3       3.25         2.99        2.58       2.16         2.61   
      3.10        3.44        3.42        3.29[] 
  []
 
 
-Overfull \hbox (186.76512pt too wide) in paragraph at lines 41--41
+Overfull \hbox (186.76512pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/5 ## 2 p2               14          0      1                 11 
             14.0       0.993        1.59        1.16       0.817        1.25   
      1.76        1.58        1.07        1.97[] 
  []
 
 
-Overfull \hbox (186.77138pt too wide) in paragraph at lines 41--41
+Overfull \hbox (186.77138pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/5 ## 3 p3                7          1      0                 13 
             15.1       1.82         1.02        2.38       1.88         2.21   
      2.57        3.09        3.11        2.28[] 
  []
 
 
-Overfull \hbox (186.76637pt too wide) in paragraph at lines 41--41
+Overfull \hbox (186.76637pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/5 ## 4 p4                8          1      0                 14 
             15.3       2.15         2.99        2.01       2.23         2.31   
      2.96        3.00        2.80        2.89[] 
  []
 
 
-Overfull \hbox (186.76762pt too wide) in paragraph at lines 41--41
+Overfull \hbox (186.76762pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/5 ## 5 p5                9          1      1                 14 
             15.7       3.03         3.17        2.66       3.02         2.91   
      3.54        3.03        3.31        3.35[] 
  []
 
 
-Overfull \hbox (186.76387pt too wide) in paragraph at lines 41--41
+Overfull \hbox (186.76387pt too wide) in paragraph at lines 40--40
 []\T1/lmtt/m/n/5 ## 6 p6               26          0      0                 12 
             14.0       1.52         1.55        1.10       1.53         1.63   
      1.94        1.78        1.29        1.95[] 
@@ -1640,7 +1640,7 @@ Overfull \hbox (186.76387pt too wide) in paragraph at lines 41--41
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (14.76842pt too high) detected at line 1146
+Overfull \vbox (14.76842pt too high) detected at line 1100
  []
 
 [26
@@ -1649,7 +1649,7 @@ Overfull \vbox (14.76842pt too high) detected at line 1146
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (21.66838pt too high) detected at line 1204
+Overfull \vbox (21.66838pt too high) detected at line 1156
  []
 
 [27
@@ -1658,7 +1658,7 @@ Overfull \vbox (21.66838pt too high) detected at line 1204
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (14.76842pt too high) detected at line 1258
+Overfull \vbox (14.76842pt too high) detected at line 1208
  []
 
 [28
@@ -1667,7 +1667,7 @@ Overfull \vbox (14.76842pt too high) detected at line 1258
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (8.58223pt too high) detected at line 1313
+Overfull \vbox (8.58223pt too high) detected at line 1261
  []
 
 [29
@@ -1697,7 +1697,7 @@ File: r_intro_files/figure-beamer/unnamed-chunk-50-1.pdf Graphic file (type pdf
 )
 <use r_intro_files/figure-beamer/unnamed-chunk-50-1.pdf>
 Package pdftex.def Info: r_intro_files/figure-beamer/unnamed-chunk-50-1.pdf  us
-ed on input line 16.
+ed on input line 15.
 (pdftex.def)             Requested size: 150.0pt x 128.57182pt.
 ) [33
 
@@ -1705,7 +1705,7 @@ ed on input line 16.
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (6.25185pt too high) detected at line 1530
+Overfull \vbox (6.25185pt too high) detected at line 1468
  []
 
 [34
@@ -1720,7 +1720,7 @@ File: r_intro_files/figure-beamer/unnamed-chunk-52-1.pdf Graphic file (type pdf
 )
 <use r_intro_files/figure-beamer/unnamed-chunk-52-1.pdf>
 Package pdftex.def Info: r_intro_files/figure-beamer/unnamed-chunk-52-1.pdf  us
-ed on input line 13.
+ed on input line 12.
 (pdftex.def)             Requested size: 150.0pt x 128.57182pt.
 ) [35
 
@@ -1810,7 +1810,7 @@ ed on input line 13.
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (7.9776pt too high) detected at line 2337
+Overfull \vbox (7.9776pt too high) detected at line 2239
  []
 
 [53
@@ -1834,7 +1834,7 @@ Overfull \vbox (7.9776pt too high) detected at line 2337
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 40.
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 39.
 
 (c:/texlive/2018/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1849,7 +1849,7 @@ File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb
-Overfull \hbox (1281.04628pt too wide) in paragraph at lines 32--32
+Overfull \hbox (1281.04628pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ##   [1] 3.0968914 1.7556519 2.5691076 2.9608262 3.5352431 1.9
 390220 1.4565211 0.8530146 1.9422049 2.3242188 4.0378935 2.9412842 2.6526861 2.
 7934185 2.5648356 3.0570361 3.1058900 1.5459072 2.2655129 2.2067723 3.1658981 2
@@ -1861,7 +1861,7 @@ Overfull \hbox (1281.04628pt too wide) in paragraph at lines 32--32
  []
 
 
-Overfull \hbox (1281.03877pt too wide) in paragraph at lines 32--32
+Overfull \hbox (1281.03877pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ##  [60] 2.6405047 1.9769918 3.0799881 1.9301455 2.6791417 3.0
 750632 2.6380266 2.2997583 1.9301881 2.3110535 3.9045953 2.7301104 2.2468516 3.
 3323696 1.2242420 2.1913527 3.4367487 1.5838962 3.3780785 1.8864433 1.6178182 2
@@ -1873,7 +1873,7 @@ Overfull \hbox (1281.03877pt too wide) in paragraph at lines 32--32
  []
 
 
-Overfull \hbox (1281.04503pt too wide) in paragraph at lines 32--32
+Overfull \hbox (1281.04503pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ## [119] 2.1362477 1.9975301 1.9805466 3.2193071 1.7284275 1.3
 998921 1.8137896 2.5268532 2.4869136 1.8184657 2.8640394 3.4677472 2.9181221 2.
 3902043 4.1902159 3.7045059 3.6763167 2.3362070 1.0630132 1.9892334 3.2473160 2
@@ -1885,7 +1885,7 @@ Overfull \hbox (1281.04503pt too wide) in paragraph at lines 32--32
  []
 
 
-Overfull \hbox (1281.0225pt too wide) in paragraph at lines 32--32
+Overfull \hbox (1281.0225pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ## [178] 2.2438199 2.7951478 2.3820597 3.3607016 1.9551251 2.2
 914024 2.5629094 2.5516064 2.4793032 1.7563591 2.6096906 2.1965405 1.9489635 3.
 2227622 3.6177809 2.4851338 1.5147589 1.1902811 3.9965113 3.4865554 2.9898991 2
@@ -1897,7 +1897,7 @@ Overfull \hbox (1281.0225pt too wide) in paragraph at lines 32--32
  []
 
 
-Overfull \hbox (1281.04378pt too wide) in paragraph at lines 32--32
+Overfull \hbox (1281.04378pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ## [237] 2.8029133 2.6756473 3.0413707 1.9748095 3.8084274 1.5
 147583 3.2044558 2.7468969 2.1079639 1.9867444 2.7115403 2.1293523 2.0998538 3.
 3104077 2.4214354 3.7689832 0.9407621 3.1133731 1.4267675 2.2944147 2.6216912 1
@@ -1909,7 +1909,7 @@ Overfull \hbox (1281.04378pt too wide) in paragraph at lines 32--32
  []
 
 
-Overfull \hbox (1281.05128pt too wide) in paragraph at lines 32--32
+Overfull \hbox (1281.05128pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ## [296] 3.2880623 2.9644639 2.1247169 2.8076262 2.2059820 1.3
 455721 1.8300033 2.7072177 2.7233655 1.2591008 2.3801160 3.1134315 1.8828302 3.
 0311202 2.2998781 1.9830778 5.1639110 2.4469012 3.2667576 2.3846062 2.6550909 1
@@ -1921,7 +1921,7 @@ Overfull \hbox (1281.05128pt too wide) in paragraph at lines 32--32
  []
 
 
-Overfull \hbox (1281.02876pt too wide) in paragraph at lines 32--32
+Overfull \hbox (1281.02876pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ## [355] 2.9584985 1.9224016 2.5383838 2.4929356 3.1961359 3.2
 343892 4.0994714 2.9938602 2.8084186 3.0216950 2.6169923 3.2430225 1.6341740 1.
 6682967 3.1648975 1.9158814 2.3951906 2.1142711 2.4797278 2.6816443 3.4277422 3
@@ -1933,7 +1933,7 @@ Overfull \hbox (1281.02876pt too wide) in paragraph at lines 32--32
  []
 
 
-Overfull \hbox (1281.05254pt too wide) in paragraph at lines 32--32
+Overfull \hbox (1281.05254pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ## [414] 2.2764986 1.7132658 2.3578819 2.5405297 1.6079901 1.4
 885995 2.6985074 2.2916481 2.6920764 1.5655158 2.4127587 2.3545957 2.8582113 2.
 5404747 3.4306630 2.0337611 3.5435181 2.2330514 2.9856100 1.8328818 3.9945577 3
@@ -1945,7 +1945,7 @@ Overfull \hbox (1281.05254pt too wide) in paragraph at lines 32--32
  []
 
 
-Overfull \hbox (218.6151pt too wide) in paragraph at lines 32--32
+Overfull \hbox (218.6151pt too wide) in paragraph at lines 31--31
 []\T1/lmtt/m/n/5 ## [473] 3.6784746 2.4112565 2.4748137 4.0057407 1.1091630 3.5
 154961 2.4298711 2.9244919 3.4194154 2.1559040 2.2093878 3.1327771 2.8560497 2.
 3935394 4.1430337 1.6437577 2.9633179 1.5166526 3.3797788[] 
@@ -1963,9 +1963,9 @@ Overfull \hbox (218.6151pt too wide) in paragraph at lines 32--32
 
 (./r_intro.vrb
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <7> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 25.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 24.
 )
-Overfull \vbox (17.05255pt too high) detected at line 2744
+Overfull \vbox (17.05255pt too high) detected at line 2630
  []
 
 [61
@@ -1980,7 +1980,7 @@ File: r_intro_files/figure-beamer/unnamed-chunk-103-1.pdf Graphic file (type pd
 f)
 <use r_intro_files/figure-beamer/unnamed-chunk-103-1.pdf>
 Package pdftex.def Info: r_intro_files/figure-beamer/unnamed-chunk-103-1.pdf  u
-sed on input line 29.
+sed on input line 28.
 (pdftex.def)             Requested size: 150.0pt x 128.57182pt.
 ) [62
 
@@ -1995,7 +1995,7 @@ sed on input line 29.
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (14.24617pt too high) detected at line 2872
+Overfull \vbox (14.24617pt too high) detected at line 2752
  []
 
 [65
@@ -2019,7 +2019,7 @@ Overfull \vbox (14.24617pt too high) detected at line 2872
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (1.70169pt too high) detected at line 3081
+Overfull \vbox (1.70169pt too high) detected at line 2953
  []
 
 [69
@@ -2028,7 +2028,7 @@ Overfull \vbox (1.70169pt too high) detected at line 3081
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (22.32066pt too high) detected at line 3148
+Overfull \vbox (22.32066pt too high) detected at line 3018
  []
 
 [70
@@ -2052,7 +2052,7 @@ Overfull \vbox (22.32066pt too high) detected at line 3148
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (62.41106pt too high) detected at line 3371
+Overfull \vbox (62.41106pt too high) detected at line 3233
  []
 
 [74
@@ -2087,7 +2087,7 @@ File: r_intro_files/figure-beamer/unnamed-chunk-131-1.pdf Graphic file (type pd
 f)
 <use r_intro_files/figure-beamer/unnamed-chunk-131-1.pdf>
 Package pdftex.def Info: r_intro_files/figure-beamer/unnamed-chunk-131-1.pdf  u
-sed on input line 26.
+sed on input line 25.
 (pdftex.def)             Requested size: 150.0pt x 85.71454pt.
 ) [79
 
@@ -2095,7 +2095,7 @@ sed on input line 26.
 \openout4 = `r_intro.vrb'.
 
 (./r_intro.vrb)
-Overfull \vbox (23.60043pt too high) detected at line 3647
+Overfull \vbox (23.60043pt too high) detected at line 3497
  []
 
 [80
@@ -2117,16 +2117,16 @@ Overfull \vbox (23.60043pt too high) detected at line 3647
 \tf@snm=\write8
 \openout8 = `r_intro.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3719.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3719.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3565.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3565.
 (./r_intro.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3719.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3719.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3565.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3565.
  ) 
 Here is how much of TeX's memory you used:
  27452 strings out of 492616
  512790 string characters out of 6132768
- 613916 words of memory out of 5000000
+ 613914 words of memory out of 5000000
  30338 multiletter control sequences out of 15000+600000
  69283 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2144,7 +2144,7 @@ pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/20
 live/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2018/texmf-dis
 t/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
 ic/lm/lmtt8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on r_intro.pdf (82 pages, 422993 bytes).
+Output written on r_intro.pdf (82 pages, 423005 bytes).
 PDF statistics:
  721 PDF objects out of 1000 (max. 8388607)
  603 compressed objects within 7 object streams
