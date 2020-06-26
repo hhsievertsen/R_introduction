@@ -1,0 +1,12 @@
+name: r_introduction
+title: r_introduction
+username:
+account: hhsievertsen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2506628
+bundleId: 3318902
+url: https://hhsievertsen.shinyapps.io/r_introduction/
+when: 1593165581.211
+asMultiple: FALSE
+asStatic: FALSE
