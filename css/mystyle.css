@@ -1,25 +1,10 @@
-h2 {
-  font-weight: bold;
-  font-size: 40px;
-  font-family: 'Playfair Display', serif;
-}
 body {
       font-size: 20px;
       color: #000000;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Open Sans', sans-serif;
 }
-.topicsList .topic {
-  line-height: 40px;
-  font-size: 15px;
-  padding-left: 10px;
-  cursor: pointer; 
-  /* background-repeat: no-repeat; */
-  /* background-size: 2px 80px; */
-  /* background-position: left 100%; */
-  /* background-image: url(images/topicProgress.png); */
-  /* border-bottom: 1px solid #f8f8f8;*/
-  -webkit-transition-property: background-position;
-  transition-property: background-position;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
+.panel-default>.panel-heading {
+    color: #ffffff;
+    background-color: #da5050;
+    border-color:  #da5050;
 }
