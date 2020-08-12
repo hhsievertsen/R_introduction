@@ -52,22 +52,22 @@ em {
 
 h2 {
     color: #a30707;
-    font-family: 'Delius', cursive;
+    font-family: 'Indie Flower', cursive;
 }
 
 h3 {
     color: #a30707;
-    font-family: 'Delius', cursive;
+    font-family: 'Indie Flower', cursive;
 }
 
 h4 {
     color: #a30707;
-    font-family: 'Delius', cursive;
+    font-family: 'Indie Flower', cursive;
 }
 
 h5 {
     color: #a30707;
-    font-family: 'Delius', cursive;
+    font-family: 'Indie Flower', cursive;
     font-size: 16px;
 }
 
@@ -86,10 +86,13 @@ h5 {
 .panel,
 pre {
     border-radius: 0;
-    background-color: #a30707;
+    background-color: gainsboro;
+    color: dimgray;
     border: 0;
-    font-size: 16px;
-    color: #c8c8c8;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
     font: 'Jost', sans-serif
 }
 
@@ -125,6 +128,7 @@ pre {
     background-color: gainsboro;
     color: dimgray;
     font-size: 13px;
+    border: 2px solid black;
 }
 
 
@@ -312,3 +316,15 @@ btn-primary:hover {
     font-family: 'Delius', cursive;
     text-shadow: none;
 }
+
+
+.code,
+pre {
+    font-size: 12px;
+    color: #404040;
+    border-bottom: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-top: 6px solid  #a30707;
+    background-color: white;
+}
+
