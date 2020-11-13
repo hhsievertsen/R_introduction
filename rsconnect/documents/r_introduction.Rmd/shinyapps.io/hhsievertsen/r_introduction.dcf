@@ -5,8 +5,8 @@ account: hhsievertsen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2506628
-bundleId: 3506299
+bundleId: 3856085
 url: https://hhsievertsen.shinyapps.io/r_introduction/
-when: 1597238722.62034
+when: 1605265494.60562
 asMultiple: FALSE
 asStatic: FALSE
